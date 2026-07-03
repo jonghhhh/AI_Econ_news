@@ -6,8 +6,14 @@
     "Anthropic": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "cross" },
     "chips": { "count": 2, "streak": 2, "first_seen": "2026-07-03", "last_seen": "2026-07-04", "domain": "finance" },
     "Tesla": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "RAG": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "RAG": { "count": 3, "streak": 2, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
     "Bitcoin": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
+    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Prometheus": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "JudgeLM": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "PandaLM": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "AutoJ": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Mistral": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "LLM": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
   }
 }

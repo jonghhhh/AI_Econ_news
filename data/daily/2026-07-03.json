@@ -1,0 +1,68 @@
+{
+  "date": "2026-07-03",
+  "edition": 41,
+  "generated_at": "2026-07-03T07:33:00+09:00",
+  "thesis": "소형 코딩 모델과 로컬 추론 비용이 동시에 화제 — 저비용 AI 인프라 경쟁이 본격화된다.",
+  "connection": {
+    "label": "오늘의 교차점",
+    "body": "AI 피드의 '자가 호스팅 LLM용 GPU 가성비 비교'와 마켓 피드의 반도체주 매도세가 맞물린다. 개발자 단의 저비용 추론 수요와 자본시장의 칩 밸류에이션 조정이 같은 사이클의 앞뒷면처럼 움직였다.",
+    "ai_ref": "gpu-platforms",
+    "market_ref": "chip-selloff"
+  },
+  "must_read": {
+    "ref": "gpu-platforms",
+    "note": "자가 호스팅 비용 구조가 흔들리면 소형 모델 채택 속도가 바뀐다."
+  },
+  "sections": [
+    {
+      "source": "Medium Daily Digest",
+      "source_url": "https://medium.com/",
+      "domain": "ai_coding",
+      "label": "AI · 코딩",
+      "items": [
+        {
+          "id": "gpu-platforms",
+          "title_ko": "자가 호스팅 AI를 위한 클라우드·GPU 플랫폼 가성비 비교 (2026)",
+          "summary_ko": "같은 GPU라도 플랫폼별 가격이 최대 6배까지 벌어진다는 비교. 자가 호스팅 비용 최적화 관점 정리.",
+          "why": "소형 모델 확산의 실제 병목은 추론 비용.",
+          "author": "Developer Awam",
+          "url": "https://medium.com/",
+          "tags": ["GPU", "self-hosting", "cost"],
+          "access": "member",
+          "signal": 4
+        },
+        {
+          "id": "glm-5-2-prev",
+          "title_ko": "GLM-5.2 접근 경로 정리",
+          "summary_ko": "중국계 모델 무료 접근 방법이 계속 확산되는 흐름.",
+          "why": "이튿날 '중국 모델 서사'로 이어짐.",
+          "author": "Chimin",
+          "url": "https://medium.com/@chimin",
+          "tags": ["GLM-5.2", "models"],
+          "access": "member",
+          "signal": 3
+        }
+      ]
+    },
+    {
+      "source": "Investing.com Daily Digest",
+      "source_url": "https://www.investing.com/news/",
+      "domain": "finance",
+      "label": "마켓 · 국제금융",
+      "items": [
+        {
+          "id": "chip-selloff",
+          "title_ko": "반도체주 매도세 — 아시아 증시 압박",
+          "summary_ko": "칩 관련주 조정이 아시아 지수를 눌렀던 하루. 이튿날 반등의 직전 국면.",
+          "why": "AI 자가 호스팅 비용 이슈와 밸류에이션 조정이 겹친다.",
+          "author": "Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news",
+          "tags": ["chips", "Asia", "selloff"],
+          "direction": "down",
+          "signal": 4
+        }
+      ]
+    }
+  ],
+  "entities_today": ["GPU", "GLM-5.2", "chips", "self-hosting"]
+}

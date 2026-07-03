@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CROSSWIRE — 오늘의 AI·마켓 교차 브리핑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F2; --ink:#14181B; --soft:#565E63; --line:#DCDED8;
+    --blue:#20438F; --blue-wash:#E9EEF7;
+    --amber:#B7741E; --amber-wash:#F6EEDF;
+    --up:#1E7A5A; --down:#B23A48; --flat:#7A7F84;
+    --card:#FBFBF9;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Newsreader",Georgia,serif; font-size:18px; line-height:1.5;
+    font-optical-sizing:auto;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+  a{color:var(--blue); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+  /* ---- Masthead ---- */
+  header.mast{border-bottom:2px solid var(--ink); padding-top:26px}
+  .mast-top{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap}
+  .brand{font-family:"Archivo",sans-serif; font-weight:800; letter-spacing:.14em;
+    font-size:clamp(30px,5.5vw,52px); line-height:.95; margin:0; text-transform:uppercase}
+  .brand span{color:var(--blue)}
+  .tagline{font-family:"JetBrains Mono",monospace; font-size:11.5px; letter-spacing:.06em;
+    color:var(--soft); text-transform:uppercase; margin:6px 0 14px}
+  .dateline{font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--soft);
+    text-align:right; line-height:1.7; white-space:nowrap}
+  .dateline b{color:var(--ink)}
+  .mast-rule{display:flex; gap:22px; align-items:center; border-top:1px solid var(--line);
+    padding:8px 0 10px; font-family:"JetBrains Mono",monospace; font-size:11px;
+    letter-spacing:.05em; color:var(--soft); text-transform:uppercase; flex-wrap:wrap}
+  .mast-rule .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block;margin-right:6px;vertical-align:middle}
+
+  /* ---- Thesis ---- */
+  .thesis{padding:30px 0 8px; max-width:900px}
+  .thesis .eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+  .thesis h2{font-family:"Newsreader",serif; font-weight:500; font-size:clamp(22px,3.4vw,34px);
+    line-height:1.28; margin:0; letter-spacing:-.01em}
+
+  /* ---- Connection (signature) ---- */
+  .cross{margin:30px 0 8px; border:1.5px solid var(--ink); background:var(--card);
+    position:relative; overflow:hidden}
+  .cross-head{display:flex;align-items:center;gap:10px;padding:12px 20px;
+    border-bottom:1px solid var(--line); background:var(--ink); color:var(--paper)}
+  .cross-head .k{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;font-size:13px}
+  .cross-head .sub{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.05em;
+    color:#B9C0C6;text-transform:uppercase;margin-left:auto}
+  .cross-body{display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch}
+  .cross-node{padding:18px 20px}
+  .cross-node .tag{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;margin-bottom:8px}
+  .cross-node.ai .tag{color:var(--blue)}
+  .cross-node.mkt .tag{color:var(--amber)}
+  .cross-node h4{margin:0 0 4px; font-family:"Newsreader",serif; font-weight:600; font-size:19px; line-height:1.25}
+  .cross-node p{margin:0; font-size:15px; color:var(--soft); line-height:1.45}
+  .cross-link{width:64px; position:relative; border-left:1px dashed var(--line); border-right:1px dashed var(--line)}
+  .cross-link::before{content:"×"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    font-family:"Archivo",sans-serif; font-weight:800; font-size:26px; color:var(--amber);
+    background:var(--card); width:40px; height:40px; border:1.5px solid var(--ink); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; line-height:1}
+  .cross-synth{padding:16px 20px 20px; border-top:1px solid var(--line); font-size:16px; line-height:1.55}
+  .cross-synth b{font-weight:600}
+
+  /* ---- Section grid ---- */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:0 40px; margin-top:34px;
+    border-top:2px solid var(--ink)}
+  .col{padding-top:16px}
+  .col + .col{border-left:1px solid var(--line); padding-left:40px}
+  .col-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .col-head h3{font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.08em;font-size:15px;margin:0}
+  .col-head .cnt{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--soft)}
+  .col.ai .col-head h3{color:var(--blue)}
+  .col.mkt .col-head h3{color:var(--amber)}
+
+  .item{padding:16px 0; border-top:1px solid var(--line)}
+  .item:first-of-type{border-top:none}
+  .item-top{display:flex; gap:8px; align-items:flex-start; margin-bottom:5px}
+  .sig{font-family:"JetBrains Mono",monospace;font-size:9.5px;font-weight:700;letter-spacing:.03em;
+    padding:2px 5px; border:1px solid var(--line); color:var(--soft); border-radius:2px;
+    flex-shrink:0; margin-top:3px}
+  .sig.hi{color:var(--amber); border-color:var(--amber); background:var(--amber-wash)}
+  .item h4{margin:0; font-family:"Newsreader",serif; font-weight:600; font-size:19px; line-height:1.28}
+  .item h4 a{color:var(--ink)}
+  .item h4 a:hover{color:var(--blue)}
+  .item .sum{margin:6px 0 8px; font-size:15.5px; color:#33393E; line-height:1.5}
+  .item .why{font-size:13.5px; color:var(--soft); font-style:italic; margin:0 0 9px;
+    padding-left:10px; border-left:2px solid var(--amber-wash)}
+  .meta{display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--soft)}
+  .tagchip{background:var(--blue-wash); color:var(--blue); padding:1px 6px; border-radius:2px; letter-spacing:.02em}
+  .col.mkt .tagchip{background:var(--amber-wash); color:var(--amber)}
+  .dir{font-weight:700; padding:1px 6px; border-radius:2px}
+  .dir.up{color:var(--up)} .dir.down{color:var(--down)} .dir.flat{color:var(--flat)}
+  .src{margin-left:auto}
+  .lock{opacity:.7}
+
+  /* ---- Momentum ---- */
+  .momentum{margin:44px 0 0; border-top:2px solid var(--ink); padding-top:16px}
+  .momentum h3{font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.08em;font-size:15px;margin:0 0 4px}
+  .momentum .lead{font-size:14px;color:var(--soft);margin:0 0 16px}
+  .mo-grid{display:flex; flex-wrap:wrap; gap:10px}
+  .mo{border:1px solid var(--line); background:var(--card); padding:9px 12px; min-width:150px; flex:1 1 160px; max-width:220px}
+  .mo .name{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:13px; display:flex; justify-content:space-between; align-items:center}
+  .mo .name .d{font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:1px 4px;border-radius:2px}
+  .mo .name .d.ai{background:var(--blue-wash);color:var(--blue)}
+  .mo .name .d.finance{background:var(--amber-wash);color:var(--amber)}
+  .mo .name .d.cross{background:var(--ink);color:var(--paper)}
+  .mo .bar{height:5px; background:var(--line); margin:8px 0 6px; border-radius:3px; overflow:hidden}
+  .mo .bar i{display:block; height:100%; background:var(--blue)}
+  .mo.cross .bar i{background:var(--ink)} .mo.finance .bar i{background:var(--amber)}
+  .mo .foot{font-family:"JetBrains Mono",monospace; font-size:10.5px; color:var(--soft)}
+  .mo .streak{color:var(--amber); font-weight:700}
+
+  /* ---- Archive + footer ---- */
+  .archive{margin:44px 0 0; border-top:1px solid var(--line); padding-top:18px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+  .archive label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--soft)}
+  select#arc{font-family:"JetBrains Mono",monospace; font-size:13px; padding:7px 10px;
+    border:1px solid var(--ink); background:var(--card); color:var(--ink); border-radius:2px}
+  .archive .badge{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--soft)}
+
+  footer{margin-top:40px; border-top:2px solid var(--ink); padding:16px 0 60px;
+    font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--soft); line-height:1.8}
+  footer b{color:var(--ink)}
+  footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  /* ---- responsive ---- */
+  @media (max-width:760px){
+    body{font-size:17px}
+    .grid{grid-template-columns:1fr; gap:0}
+    .col + .col{border-left:none; border-top:1px solid var(--ink); padding-left:0; margin-top:20px; padding-top:16px}
+    .cross-body{grid-template-columns:1fr}
+    .cross-link{width:auto; height:44px; border-left:none; border-right:none;
+      border-top:1px dashed var(--line); border-bottom:1px dashed var(--line)}
+    .dateline{text-align:left}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .item, .mo, .cross{animation:rise .5s ease both}
+    @keyframes rise{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+  }
+  :focus-visible{outline:2px solid var(--blue); outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div class="mast-top">
+      <div>
+        <h1 class="brand">CROSS<span>WIRE</span></h1>
+        <div class="tagline">AI·코딩 × 국제금융 — 매일 아침 교차 브리핑</div>
+      </div>
+      <div class="dateline" id="dateline"></div>
+    </div>
+    <div class="mast-rule" id="mastrule"></div>
+  </header>
+
+  <section class="thesis" id="thesis"></section>
+  <section id="cross"></section>
+  <div class="grid" id="grid"></div>
+  <section class="momentum" id="momentum"></section>
+
+  <div class="archive">
+    <label for="arc">지난 에디션</label>
+    <select id="arc"></select>
+    <span class="badge" id="arcbadge"></span>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div>SOURCES · <b>Medium Daily Digest</b> · <b>Investing.com Daily Digest</b><br>
+      요약은 원문 재서술 + 출처 링크. 원문 전문은 각 매체에서 확인하세요.</div>
+      <div style="text-align:right">GENERATED BY <b>CLAUDE CODE ROUTINE</b><br>매일 07:30 KST · 자동 커밋</div>
+    </div>
+  </footer>
+</div>
+
+<!-- 오프라인/프리뷰 폴백: GitHub Pages에서는 ./data/*.json 를 fetch 하고, 실패 시 아래 데이터를 사용 -->
+<script id="fallback" type="application/json">
+{"manifest":{"updated":"2026-07-04","latest":"2026-07-04","editions":[{"date":"2026-07-04","edition":42,"thesis":"중국발 프런티어 모델이 쏟아지는 사이, 미국 진영은 접근을 조인다."},{"date":"2026-07-03","edition":41,"thesis":"소형 코딩 모델과 로컬 추론 비용이 동시에 화제."}]},"entities":{"updated":"2026-07-04","entities":{"GLM-5.2":{"count":3,"streak":3,"first_seen":"2026-07-02","last_seen":"2026-07-04","domain":"ai"},"China":{"count":4,"streak":2,"first_seen":"2026-07-01","last_seen":"2026-07-04","domain":"cross"},"Anthropic":{"count":2,"streak":1,"first_seen":"2026-07-04","last_seen":"2026-07-04","domain":"cross"},"chips":{"count":2,"streak":2,"first_seen":"2026-07-03","last_seen":"2026-07-04","domain":"finance"},"Tesla":{"count":2,"streak":1,"first_seen":"2026-07-04","last_seen":"2026-07-04","domain":"finance"},"RAG":{"count":2,"streak":1,"first_seen":"2026-07-04","last_seen":"2026-07-04","domain":"ai"},"Bitcoin":{"count":1,"streak":1,"first_seen":"2026-07-04","last_seen":"2026-07-04","domain":"finance"},"Sakana":{"count":1,"streak":1,"first_seen":"2026-07-04","last_seen":"2026-07-04","domain":"ai"}}},"daily":{"2026-07-04":{"date":"2026-07-04","edition":42,"generated_at":"2026-07-04T07:35:00+09:00","thesis":"중국발 프런티어 모델이 쏟아지는 사이, 미국 진영은 접근을 조인다 — 오늘 두 피드는 같은 '디커플링' 이야기를 양쪽에서 비춘다.","connection":{"label":"오늘의 교차점","body":"AI 피드에서는 중국계 모델의 약진이 두드러진다 — GLM-5.2 무료 접근 경로 정리, '중국의 첫 진짜 프런티어 모델' 논쟁이 동시에 올라왔다. 같은 날 마켓 피드에서는 Anthropic이 중국 기업의 Claude 우회 접근을 차단하려 한다는 FT발 보도와, 알리바바가 Kling AI 투자 라운드에 참여했다는 소식이 나왔다. 공급(중국 내 대안 모델의 성숙)과 차단(외산 모델 접근 제한)이 맞물리는, 하나의 기술-지정학 디커플링을 두 사일로가 반대편에서 포착한 셈이다.","ai_ref":"glm-5-2","market_ref":"anthropic-china-access"},"must_read":{"ref":"anthropic-china-access","note":"두 피드가 교차하는 지점 위에 있는 검증 가능한 실제 뉴스. AI 접근 통제가 시장 이벤트로 번지는 첫 신호."},"sections":[{"source":"Medium Daily Digest","source_url":"https://medium.com/","domain":"ai_coding","label":"AI · 코딩","items":[{"id":"china-frontier","title_ko":"중국의 첫 '진짜' 프런티어 모델인가","summary_ko":"중국발 신모델이 서구 최상위권과 견줄 수준에 도달했는지 짚는 분석. 벤치마크 우위와 과장을 구분해 읽으라는 관점이 핵심.","why":"GLM·Sakana 등과 함께 '중국 모델 서사'가 이번 주 피드를 관통한다.","author":"Ignacio de Gregorio","url":"https://medium.com/@ignaciodegregorio","tags":["China","frontier-model"],"access":"member","signal":5},{"id":"glm-5-2","title_ko":"GLM-5.2에 무료로 접근하는 8가지 경로","summary_ko":"6월 중순 조용히 공개된 GLM-5.2를 비용 없이 써보는 방법 정리. 진입장벽이 낮아지며 확산 속도가 빨라지는 흐름.","why":"'중국 모델 접근성'이 오늘 마켓 피드의 접근 통제 뉴스와 정확히 맞물린다.","author":"Chimin","url":"https://medium.com/@chimin","tags":["GLM-5.2","models","access"],"access":"member","signal":4},{"id":"sakana-fugu","title_ko":"일본 Sakana의 Fugu가 조용히 Claude Mythos를 넘었다는 주장","summary_ko":"일본발 모델 Sakana Fugu가 특정 지표에서 상위 모델을 앞섰다는 소개. 화제성 위주라 실측 검증은 별도로 필요.","why":"미·중 이분법 밖에서 일본 변수가 끼어드는 신호.","author":"Pranit Naik","url":"https://medium.com/@pranitnaik","tags":["Sakana","Claude-Mythos","Japan"],"access":"member","signal":3},{"id":"ornith","title_ko":"Ornith 1.0: 스스로 실행 하니스를 짜는 9B 코딩 모델","summary_ko":"9B 규모로 SWE-bench Verified 69.4를 냈다는 코딩 특화 모델. 작은 모델의 에이전트형 자기수정 능력이 관전 포인트.","why":"소형 모델의 에이전트화 — 로컬/저비용 코딩 자동화 흐름.","author":"Kashif Mehmood","url":"https://medium.com/@kashifmehmood","tags":["Ornith","SWE-bench","small-models"],"access":"member","signal":4},{"id":"agentic-loop","title_ko":"'에이전틱 코딩 루프'란 무엇이고 어떻게 만드나","summary_ko":"단발 프롬프트를 넘어, 계획-실행-검증을 반복하는 루프 구조로 코딩 에이전트를 짜는 법을 개념부터 설명.","why":"교수님 agent_newsmaking 파이프라인 설계와 직접 맞닿는 주제.","author":"Marco Kotrotsos","url":"https://medium.com/@marcokotrotsos","tags":["agentic","workflow","loop"],"access":"member","signal":3},{"id":"codegraph","title_ko":"CodeGraph: 아무 폴더나 지식 그래프로 바꾸기","summary_ko":"코드베이스를 노드-엣지 지식 그래프로 변환해 에이전트가 구조를 파악하게 하는 도구 사용법.","why":"GraphRAG·검열기록 지식그래프 작업과 방법론이 겹친다.","author":"Ana Bildea","url":"https://medium.com/@anabildea","tags":["knowledge-graph","tooling","RAG"],"access":"member","signal":3},{"id":"rag-10m","title_ko":"환각 거의 0으로 1000만+ 문서 RAG 파이프라인 만들기","summary_ko":"검색-제약-검증-기권(abstain) 4단계로 대규모 RAG의 환각을 줄이는 설계. 팩트체크 자동화와 결이 같다.","why":"KcELECTRA+LangGraph RAG 팩트체크 논문 개선에 참고할 만한 검증 루틴.","author":"Fareed Khan","url":"https://medium.com/@fareedkhan","tags":["RAG","hallucination","verification"],"access":"member","signal":4},{"id":"agent-repos","title_ko":"2026년 AI 에이전트 워크플로를 다시 쓰는 오픈소스 5선","summary_ko":"에이전트 워크플로를 재정의하는 깃허브 저장소 다섯 개를 주간 큐레이션 형태로 소개.","why":"오픈소스 에이전트 생태계 주간 스냅샷.","author":"Vijayasekhar Deepak","url":"https://medium.com/@vijayasekhardeepak","tags":["agents","open-source","github"],"access":"member","signal":2}]},{"source":"Investing.com Daily Digest","source_url":"https://www.investing.com/news/","domain":"finance","label":"마켓 · 국제금융","items":[{"id":"anthropic-china-access","title_ko":"Anthropic, 중국 기업의 Claude 우회 접근 차단 추진 (FT)","summary_ko":"FT 보도 인용. Anthropic이 중국 기업들이 규제를 우회해 Claude에 접근하는 경로를 겨냥한다는 내용. AI 접근 통제가 지정학 이슈로 확대.","why":"오늘의 교차점 축. AI 공급망 통제가 시장 뉴스가 되는 순간.","author":"Investing.com","url":"https://www.investing.com/news/stock-market-news","tags":["Anthropic","China","export-controls"],"direction":"flat","signal":5},{"id":"kuaishou-kling","title_ko":"알리바바, Kling AI 투자 라운드 합류 — 콰이쇼우 1주 최고가","summary_ko":"알리바바가 Kling AI 펀딩에 참여했다는 소식에 콰이쇼우 주가가 일주일 최고 수준으로 상승.","why":"중국 빅테크의 생성형 AI 자본 집결 — AI 피드의 중국 서사와 호응.","author":"Investing.com","url":"https://www.investing.com/news/stock-market-news","tags":["China","Alibaba","AI-funding"],"direction":"up","signal":4},{"id":"bitcoin-61k","title_ko":"비트코인 $61k 상회 — 약한 고용지표에 주간 상승","summary_ko":"미국 고용지표가 예상보다 부진하자 비트코인이 6만1천 달러 위를 지키며 주간 기준 상승세로 마감 채비.","why":"'약한 고용 → 완화 기대'가 위험자산 전반을 밀어올리는 구도.","author":"Investing.com","url":"https://www.investing.com/news/cryptocurrency-news","tags":["Bitcoin","crypto","jobs-data"],"direction":"up","signal":3},{"id":"fed-nightmare","title_ko":"연준의 악몽 시나리오 — 약한 고용 + 높은 인플레","summary_ko":"고용은 식는데 물가는 높은 스태그플레이션형 조합이 현실화됐다는 분석. 정책 딜레마가 커지는 국면.","why":"위 비트코인·아시아 반등의 배경 매크로. 오늘 시장 심리의 뿌리.","author":"Nigel Green","url":"https://www.investing.com/analysis","tags":["Fed","inflation","jobs-data"],"direction":"down","signal":4},{"id":"tesla-china","title_ko":"테슬라 中 공급사 강세 — 분기 인도량 호조 + 사상 최대 인도","summary_ko":"테슬라의 강한 2분기 인도 실적에 중국 공급업체 주가가 오르고, 유럽 회복이 연간 성장 기대를 키움.","why":"실물 수요 회복 신호가 지수 반등을 뒷받침.","author":"Investing.com","url":"https://www.investing.com/news/stock-market-news","tags":["Tesla","China","EV"],"direction":"up","signal":3},{"id":"asia-chips","title_ko":"아시아 증시 반등 — 반도체 회복·약한 유가가 지지","summary_ko":"칩 관련주가 매도세에서 회복되고 유가 약세가 심리를 개선하며 아시아 증시가 반등.","why":"미국 휴장일에도 아시아가 방향을 만든 하루.","author":"Investing.com","url":"https://www.investing.com/news/stock-market-news","tags":["Asia","chips","oil"],"direction":"up","signal":3},{"id":"usdjpy-intervention","title_ko":"USD/JPY, 엔 개입 경계 고조","summary_ko":"엔 약세가 이어지며 일본 당국의 시장 개입 가능성에 경계감이 높아짐.","why":"환 변동성 — 아시아 리스크 심리에 직접 영향.","author":"Francesco Pesole","url":"https://www.investing.com/analysis","tags":["USDJPY","FX","Japan"],"direction":"down","signal":2}]}],"entities_today":["China","GLM-5.2","Anthropic","Claude-Mythos","Sakana","Tesla","Bitcoin","Alibaba","RAG","Fed","SWE-bench"]},"2026-07-03":{"date":"2026-07-03","edition":41,"generated_at":"2026-07-03T07:33:00+09:00","thesis":"소형 코딩 모델과 로컬 추론 비용이 동시에 화제 — 저비용 AI 인프라 경쟁이 본격화된다.","connection":{"label":"오늘의 교차점","body":"AI 피드의 '자가 호스팅 LLM용 GPU 가성비 비교'와 마켓 피드의 반도체주 매도세가 맞물린다. 개발자 단의 저비용 추론 수요와 자본시장의 칩 밸류에이션 조정이 같은 사이클의 앞뒷면처럼 움직였다.","ai_ref":"gpu-platforms","market_ref":"chip-selloff"},"must_read":{"ref":"gpu-platforms","note":"자가 호스팅 비용 구조가 흔들리면 소형 모델 채택 속도가 바뀐다."},"sections":[{"source":"Medium Daily Digest","source_url":"https://medium.com/","domain":"ai_coding","label":"AI · 코딩","items":[{"id":"gpu-platforms","title_ko":"자가 호스팅 AI를 위한 클라우드·GPU 플랫폼 가성비 비교 (2026)","summary_ko":"같은 GPU라도 플랫폼별 가격이 최대 6배까지 벌어진다는 비교. 자가 호스팅 비용 최적화 관점 정리.","why":"소형 모델 확산의 실제 병목은 추론 비용.","author":"Developer Awam","url":"https://medium.com/","tags":["GPU","self-hosting","cost"],"access":"member","signal":4},{"id":"glm-5-2-prev","title_ko":"GLM-5.2 접근 경로 정리","summary_ko":"중국계 모델 무료 접근 방법이 계속 확산되는 흐름.","why":"이튿날 '중국 모델 서사'로 이어짐.","author":"Chimin","url":"https://medium.com/@chimin","tags":["GLM-5.2","models"],"access":"member","signal":3}]},{"source":"Investing.com Daily Digest","source_url":"https://www.investing.com/news/","domain":"finance","label":"마켓 · 국제금융","items":[{"id":"chip-selloff","title_ko":"반도체주 매도세 — 아시아 증시 압박","summary_ko":"칩 관련주 조정이 아시아 지수를 눌렀던 하루. 이튿날 반등의 직전 국면.","why":"AI 자가 호스팅 비용 이슈와 밸류에이션 조정이 겹친다.","author":"Investing.com","url":"https://www.investing.com/news/stock-market-news","tags":["chips","Asia","selloff"],"direction":"down","signal":4}]}],"entities_today":["GPU","GLM-5.2","chips","self-hosting"]}}}
+</script>
+
+<script>
+const DIR = {up:"▲", down:"▼", flat:"■"};
+const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function loadJSON(path, fbKey){
+  try{
+    const r = await fetch(path, {cache:"no-store"});
+    if(!r.ok) throw 0;
+    return await r.json();
+  }catch(e){
+    const fb = JSON.parse(document.getElementById("fallback").textContent);
+    return fbKey.split(".").reduce((o,k)=>o&&o[k], fb);
+  }
+}
+
+function fmtDate(iso){
+  const d = new Date(iso+"T00:00:00");
+  return d.toLocaleDateString("ko-KR",{year:"numeric",month:"long",day:"numeric",weekday:"long"});
+}
+
+function renderMast(ed, ent){
+  document.getElementById("dateline").innerHTML =
+    `<b>${fmtDate(ed.date)}</b><br>EDITION №${String(ed.edition).padStart(3,"0")} · KST 07:30`;
+  const tracked = Object.keys((ent&&ent.entities)||{}).length;
+  document.getElementById("mastrule").innerHTML =
+    `<span><span class="dot"></span>자동 생성 · 매일 1회</span>`+
+    `<span>· 소스 2 (Medium / Investing.com)</span>`+
+    `<span>· 추적 엔티티 ${tracked}</span>`+
+    `<span>· 오늘 항목 ${ed.sections.reduce((n,s)=>n+s.items.length,0)}</span>`;
+}
+
+function renderThesis(ed){
+  document.getElementById("thesis").innerHTML =
+    `<div class="eyebrow">오늘의 한 줄</div><h2>${esc(ed.thesis)}</h2>`;
+}
+
+function findItem(ed, ref){
+  for(const s of ed.sections){ const it = s.items.find(i=>i.id===ref); if(it) return {it, s}; }
+  return null;
+}
+
+function renderCross(ed){
+  const c = ed.connection;
+  const a = findItem(ed, c.ai_ref), m = findItem(ed, c.market_ref);
+  document.getElementById("cross").innerHTML = `
+    <div class="cross">
+      <div class="cross-head">
+        <span class="k">${esc(c.label)}</span>
+        <span class="sub">AI × MARKET — 이메일엔 없는 연결</span>
+      </div>
+      <div class="cross-body">
+        <div class="cross-node ai">
+          <div class="tag">AI · 코딩</div>
+          <h4>${a?`<a href="${esc(a.it.url)}" target="_blank" rel="noopener">${esc(a.it.title_ko)}</a>`:"—"}</h4>
+          <p>${a?esc(a.it.summary_ko):""}</p>
+        </div>
+        <div class="cross-link" aria-hidden="true"></div>
+        <div class="cross-node mkt">
+          <div class="tag">마켓 · 금융</div>
+          <h4>${m?`<a href="${esc(m.it.url)}" target="_blank" rel="noopener">${esc(m.it.title_ko)}</a>`:"—"}</h4>
+          <p>${m?esc(m.it.summary_ko):""}</p>
+        </div>
+      </div>
+      <div class="cross-synth">${esc(c.body)}</div>
+    </div>`;
+}
+
+function itemHTML(it, mustRef){
+  const must = it.id===mustRef;
+  const sig = must
+    ? `<span class="sig hi" title="오늘 꼭 볼 것">★ MUST</span>`
+    : `<span class="sig" title="신호 등급">S${it.signal}</span>`;
+  const dir = it.direction
+    ? `<span class="dir ${it.direction}">${DIR[it.direction]} ${it.direction.toUpperCase()}</span>` : "";
+  const lock = it.access==="member" ? `<span class="lock" title="유료 회원 전용">🔒</span>` : "";
+  const tags = (it.tags||[]).slice(0,3).map(t=>`<span class="tagchip">#${esc(t)}</span>`).join(" ");
+  return `<article class="item">
+    <div class="item-top">${sig}
+      <h4><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title_ko)}</a></h4>
+    </div>
+    <p class="sum">${esc(it.summary_ko)}</p>
+    ${it.why?`<p class="why">왜 중요한가 · ${esc(it.why)}</p>`:""}
+    <div class="meta">${dir} ${tags}
+      <span class="src">${lock} ${esc(it.author||"")} · <a href="${esc(it.url)}" target="_blank" rel="noopener">원문 →</a></span>
+    </div>
+  </article>`;
+}
+
+function renderGrid(ed){
+  const mustRef = ed.must_read && ed.must_read.ref;
+  const cls = {ai_coding:"ai", finance:"mkt"};
+  document.getElementById("grid").innerHTML = ed.sections.map(s=>`
+    <div class="col ${cls[s.domain]||""}">
+      <div class="col-head"><h3>${esc(s.label)}</h3><span class="cnt">${s.items.length} ITEMS · ${esc(s.source)}</span></div>
+      ${s.items.map(it=>itemHTML(it, mustRef)).join("")}
+    </div>`).join("");
+}
+
+function renderMomentum(ent){
+  const items = Object.entries((ent&&ent.entities)||{})
+    .sort((a,b)=> (b[1].count-a[1].count) || (b[1].streak-a[1].streak))
+    .slice(0,8);
+  const max = Math.max(...items.map(([,v])=>v.count), 1);
+  document.getElementById("momentum").innerHTML = `
+    <h3>모멘텀 — 반복 등장 엔티티</h3>
+    <p class="lead">이메일은 오늘치만 보여준다. 여기선 모델·기업·기법이 며칠에 걸쳐 얼마나 반복되는지 누적으로 쌓인다.</p>
+    <div class="mo-grid">
+      ${items.map(([name,v])=>`
+        <div class="mo ${v.domain}">
+          <div class="name">${esc(name)}<span class="d ${v.domain}">${v.domain}</span></div>
+          <div class="bar"><i style="width:${Math.round(v.count/max*100)}%"></i></div>
+          <div class="foot">등장 ${v.count}회 ${v.streak>1?`· <span class="streak">${v.streak}일 연속</span>`:""}</div>
+        </div>`).join("")}
+    </div>`;
+}
+
+let MANIFEST=null;
+async function showEdition(date){
+  const ed = await loadJSON(`./data/daily/${date}.json`, `daily.${date}`);
+  const ent = await loadJSON(`./data/entities.json`, "entities");
+  renderMast(ed, ent); renderThesis(ed); renderCross(ed); renderGrid(ed); renderMomentum(ent);
+  document.getElementById("arcbadge").textContent =
+    date===MANIFEST.latest ? "최신 에디션" : "아카이브 열람 중";
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+async function init(){
+  MANIFEST = await loadJSON("./data/manifest.json","manifest");
+  const sel = document.getElementById("arc");
+  sel.innerHTML = MANIFEST.editions.map(e=>
+    `<option value="${e.date}">${e.date} · №${String(e.edition).padStart(3,"0")}</option>`).join("");
+  sel.value = MANIFEST.latest;
+  sel.addEventListener("change", ()=>showEdition(sel.value));
+  await showEdition(MANIFEST.latest);
+}
+init();
+</script>
+</body>
+</html>

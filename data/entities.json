@@ -1,0 +1,13 @@
+{
+  "updated": "2026-07-04",
+  "entities": {
+    "GLM-5.2": { "count": 3, "streak": 3, "first_seen": "2026-07-02", "last_seen": "2026-07-04", "domain": "ai" },
+    "China": { "count": 4, "streak": 2, "first_seen": "2026-07-01", "last_seen": "2026-07-04", "domain": "cross" },
+    "Anthropic": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "cross" },
+    "chips": { "count": 2, "streak": 2, "first_seen": "2026-07-03", "last_seen": "2026-07-04", "domain": "finance" },
+    "Tesla": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
+    "RAG": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Bitcoin": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
+    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
+  }
+}

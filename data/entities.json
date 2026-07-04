@@ -8,6 +8,8 @@
     "Tesla": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
     "RAG": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
     "Bitcoin": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
+    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "LinkedIn": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Claude-Code": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
   }
 }

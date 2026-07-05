@@ -1,13 +1,20 @@
 {
-  "updated": "2026-07-04",
+  "updated": "2026-07-05",
   "entities": {
-    "GLM-5.2": { "count": 3, "streak": 3, "first_seen": "2026-07-02", "last_seen": "2026-07-04", "domain": "ai" },
-    "China": { "count": 4, "streak": 2, "first_seen": "2026-07-01", "last_seen": "2026-07-04", "domain": "cross" },
-    "Anthropic": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "cross" },
-    "chips": { "count": 2, "streak": 2, "first_seen": "2026-07-03", "last_seen": "2026-07-04", "domain": "finance" },
-    "Tesla": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "RAG": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
-    "Bitcoin": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
+    "GLM-5.2": { "count": 3, "streak": 0, "first_seen": "2026-07-02", "last_seen": "2026-07-04", "domain": "ai" },
+    "China": { "count": 4, "streak": 0, "first_seen": "2026-07-01", "last_seen": "2026-07-04", "domain": "cross" },
+    "Anthropic": { "count": 3, "streak": 2, "first_seen": "2026-07-04", "last_seen": "2026-07-05", "domain": "cross" },
+    "chips": { "count": 2, "streak": 0, "first_seen": "2026-07-03", "last_seen": "2026-07-04", "domain": "finance" },
+    "Tesla": { "count": 2, "streak": 0, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
+    "RAG": { "count": 2, "streak": 0, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Bitcoin": { "count": 1, "streak": 0, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
+    "Sakana": { "count": 1, "streak": 0, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
+    "Claude-Code": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "ai" },
+    "Claude-Cowork": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "ai" },
+    "Python": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "ai" },
+    "UX": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "ai" },
+    "dividends": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "finance" },
+    "recession": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "finance" },
+    "Fed": { "count": 1, "streak": 1, "first_seen": "2026-07-05", "last_seen": "2026-07-05", "domain": "finance" }
   }
 }

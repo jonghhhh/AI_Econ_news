@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-05",
+  "edition": 43,
+  "generated_at": "2026-07-05T07:30:00+09:00",
+  "thesis": "Claude Code 하네스 설계가 처음 외부에 해부된 날 — Investing.com 피드 미수신으로 금융 전용 신호는 없으나, 같은 Medium 피드에 침체 대비 자산 배분 기사가 나란히 실려 AI 빌더와 투자자의 관심이 한 뉴스레터 안에서 수렴했다.",
+  "top_picks": [
+    {
+      "domain": "ai_coding",
+      "ref": "claude-code-harness",
+      "note": "Fable 5 복구·Sonnet 5 출시 직후, Claude Code 내부의 멀티에이전트·MCP·스킬 파이프라인 설계가 78분 분량으로 처음 외부에 해부됐다. 에이전트 시스템을 직접 구축하는 개발자라면 오늘 가장 읽을 가치가 있는 글."
+    },
+    {
+      "domain": "finance",
+      "ref": "pre-crash-assets",
+      "note": "Investing.com 미수신 상황에서 오늘 유일한 금융 신호. Fed 금리 고원·인플레 3%대 지속 속에 부유층의 선행 자산 이동 패턴이 오늘 같은 피드에 실렸다 — 거시 불확실성이 높아질 때 포트폴리오 방어 논리를 다지는 참고점."
+    }
+  ],
+  "sections": [
+    {
+      "source": "Medium Daily Digest",
+      "source_url": "https://medium.com/",
+      "domain": "ai_coding",
+      "label": "AI · 코딩",
+      "items": [
+        {
+          "id": "claude-code-harness",
+          "title_ko": "하네스 엔지니어링으로 Claude Code를 만드는 법",
+          "summary_ko": "멀티에이전트 오케스트레이션, MCP 연동, 스킬 시스템, 컨텍스트 파이프라인을 아우르는 Claude Code의 내부 설계를 78분 분량으로 해부한 글. Fable 5 복구와 Sonnet 5 출시 이후 플랫폼 아키텍처를 이해하기 위한 최적의 타이밍에 나왔다.",
+          "why": "Claude Code 아키텍처를 외부 시각으로 가장 깊이 분석한 실전 레퍼런스 — 에이전트 시스템 빌더 필독.",
+          "author": "Fareed Khan",
+          "url": "https://medium.com/@fareedkhandev/building-claude-code-with-harness-engineering-d2e8c0da85f0?source=email-d527aa9c13b9-1783272269799-digest.reader-5517fd7b58a6-d2e8c0da85f0----2-109------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["Claude-Code", "harness", "multi-agent"],
+          "access": "member",
+          "signal": 5
+        },
+        {
+          "id": "claude-cowork-prompts",
+          "title_ko": "Claude Cowork 프롬프트 100개 테스트 후 추린 7가지",
+          "summary_ko": "반복 업무 자동화에 실제로 효과 있는 Claude Cowork 프롬프트 7개를 대규모 테스트로 검증한 결과물. 복사해서 즉시 적용 가능한 실용 포맷으로 제공하며, 자동화 도입 초기 팀에게 진입 비용을 낮춰 준다.",
+          "why": "Claude Cowork 실전 도입을 고려하는 팀에게 즉각 참고할 수 있는 검증된 프롬프트 모음.",
+          "author": "Frank Andrade (The PyCoach)",
+          "url": "https://medium.com/@frank-andrade/we-tested-100s-of-claude-cowork-prompts-these-7-automate-your-boring-work-6be24ddb84b4?source=email-d527aa9c13b9-1783272269799-digest.reader-76436a11a2b0-6be24ddb84b4----14-73------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["Claude-Cowork", "automation", "prompts"],
+          "access": "member",
+          "signal": 4
+        },
+        {
+          "id": "ai-designer-shift",
+          "title_ko": "AI 중심 세계에서 디자이너가 바꿔야 할 것들",
+          "summary_ko": "AI 기반 제품 환경이 일상이 된 지금, 디자이너의 역할이 도구 사용자에서 AI 협업자로 전환되는 과정을 패널 토론 형태로 정리했다. 실무 전환 지점과 저항 요인을 솔직하게 다루는 11분 분량.",
+          "why": "제품·UX 팀이 AI 전환 국면에서 역할을 재정의해야 하는 시점에 나온 실무 시각.",
+          "author": "Cassie McDaniel",
+          "url": "https://medium.com/@cassiebegins/how-designers-need-to-change-for-an-ai-powered-world-b51c3c195954?source=email-d527aa9c13b9-1783272269799-digest.reader-138adf9c44c-b51c3c195954----6-109------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["design", "AI", "UX"],
+          "access": "member",
+          "signal": 3
+        },
+        {
+          "id": "automation-scripts-11",
+          "title_ko": "자동화 스크립트 100개를 써보고 살아남은 11개",
+          "summary_ko": "파이썬으로 100개 넘는 자동화 스크립트를 직접 제작·검증한 저자가 실제 생산성 변화를 만든 11개를 추려 공개한다. 18분 분량이지만 바로 적용 가능한 코드 중심 구성으로 실용성이 높다.",
+          "why": "현장 검증된 파이썬 자동화 레퍼런스 — 개발자와 연구자 모두에게 즉시 활용 가능.",
+          "author": "Abhay Parashar",
+          "url": "https://medium.com/@abhayparashar31/i-wrote-100-automation-scripts-these-11-changed-everything-01cd600ce64d?source=email-d527aa9c13b9-1783272269799-digest.reader-7a8fb64b42eb-01cd600ce64d----9-73------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["Python", "automation", "productivity"],
+          "access": "member",
+          "signal": 3
+        },
+        {
+          "id": "pre-crash-assets",
+          "title_ko": "경제 폭락 직전 부유층이 매수하는 자산 4종",
+          "summary_ko": "역사적 경기 침체 직전 고자산 투자자들이 공통으로 이동시켜 온 자산군 4가지를 근거와 함께 정리했다. Fed 금리 동결·인플레 3%대 지속 국면인 지금과 비교해 읽으면 맥락이 선명해진다.",
+          "why": "거시 불확실성이 높아지는 지금, 선행 자산 배분 패턴을 점검하기 좋은 타이밍.",
+          "author": "The Curious Finance Girl",
+          "url": "https://medium.com/@thecuriousfinancegirl/before-every-economic-crash-rich-people-buy-these-4-assets-fdbc4dfd3658?source=email-d527aa9c13b9-1783272269799-digest.reader-84ac01765c52-fdbc4dfd3658----10-73------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["recession", "assets", "portfolio"],
+          "access": "member",
+          "signal": 4
+        },
+        {
+          "id": "monthly-dividend-stocks",
+          "title_ko": "월세를 대신 낼 월배당 주식 4종 선정",
+          "summary_ko": "매월 배당을 지급하는 주식 4종을 선별해 수익률·안정성·진입 타이밍을 함께 분석했다. 금리 동결 장기화 국면에서 현금 흐름형 자산 수요가 높아지는 배경을 포착한 실용 가이드.",
+          "why": "금리 고원 속 안정적 현금 흐름 수요가 높아지는 지금, 월배당 전략의 현실적 검토.",
+          "author": "The Curious Finance Girl",
+          "url": "https://medium.com/@thecuriousfinancegirl/4-monthly-dividend-stocks-that-will-pay-your-rent-f6d22af29e55?source=email-d527aa9c13b9-1783272269799-digest.reader-84ac01765c52-f6d22af29e55----1-73------------------29867dbb_6b47_4cd5_b7d2_bcdbda7d6193-1",
+          "tags": ["dividends", "stocks", "income"],
+          "access": "member",
+          "signal": 3
+        }
+      ]
+    },
+    {
+      "source": "Investing.com Daily Digest",
+      "source_url": "https://www.investing.com/news/",
+      "domain": "finance",
+      "label": "마켓 · 국제금융",
+      "items": []
+    }
+  ],
+  "entities_today": ["Claude-Code", "Claude-Cowork", "Anthropic", "Python", "UX", "dividends", "recession", "Fed"]
+}

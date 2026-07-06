@@ -1,0 +1,75 @@
+{
+  "date": "2026-07-06",
+  "edition": 43,
+  "generated_at": "2026-07-06T22:50:00+09:00",
+  "thesis": "Investing.com 메일 미수신 — Medium AI 피드 단독 진행. 단일 대형 모델 경쟁에서 '라우터 앙상블'로 우회하는 Sakana의 구조 혁신이 오늘의 핵심 신호다.",
+  "top_picks": [
+    {
+      "domain": "ai_coding",
+      "ref": "sakana-router",
+      "note": "단순 벤치마크 경쟁 대신 다중 특화 모델 동적 라우팅이라는 구조 혁신으로 Claude급 성능을 달성했다는 점이 중요하다. 대규모 단일 모델 없이도 프런티어에 근접할 수 있다면, 차세대 AI 경쟁 지형 자체가 달라진다."
+    }
+  ],
+  "sections": [
+    {
+      "source": "Medium Daily Digest",
+      "source_url": "https://medium.com/",
+      "domain": "ai_coding",
+      "label": "AI · 코딩",
+      "items": [
+        {
+          "id": "sakana-router",
+          "title_ko": "일본 Sakana, 라우터 앙상블로 'Mythos' 급 성능 선언",
+          "summary_ko": "도쿄 기반 Sakana AI가 개발한 Fugu 시스템은 거대 단일 모델 대신 특화 에이전트 풀에 쿼리를 동적으로 배분하는 라우터 방식이다. SWE Bench Pro에서 73.7점으로 Claude Opus 4.8(69.2)을 앞섰고, GPQA-Diamond에서 Mythos Preview 수준에 근접한 성능을 공개 발표했다. 전면적 Fable 5 추월은 아니지만 특정 지표에서 비등한 수준이라는 점이 주목받고 있다.",
+          "why": "라우터 앙상블이 단순 스케일업 없이 프런티어에 진입할 수 있음을 실증한 사례 — AI 경쟁 구도를 파라미터 수에서 구조 설계로 옮겨놓는 신호다.",
+          "author": "Kashif Mehmood",
+          "url": "https://medium.com/@kashif-mehmood-km/japan-just-entered-the-ai-race-with-sakana-claiming-to-beat-mythos-with-a-router-691b9b56ccbe",
+          "tags": ["Sakana", "Fugu", "routing"],
+          "access": "member",
+          "signal": 4
+        },
+        {
+          "id": "personal-ai-agent",
+          "title_ko": "몇 시간 만에 나만의 AI 에이전트 만들기",
+          "summary_ko": "Python과 API만으로 개인용 AI 에이전트를 단시간에 구축하는 실전 가이드다. 무거운 프레임워크 없이 계획-실행-반환 핵심 루프를 직접 구현하는 방식에 초점을 맞추며, 입문자도 따라할 수 있는 구조로 설명한다.",
+          "why": "에이전트 구현의 진입장벽이 실질적으로 낮아지고 있음을 보여주는 실용 사례.",
+          "author": "Ivo Bernardo",
+          "url": "https://medium.com/@ivopbernardo/building-a-personal-ai-agent-in-a-couple-of-hours-7bea912f9a12",
+          "tags": ["AI-agent", "tutorial", "Python"],
+          "access": "member",
+          "signal": 3
+        },
+        {
+          "id": "worldcup-surveillance",
+          "title_ko": "월드컵이 AI 감시 기술을 새로운 차원으로 끌어올리다",
+          "summary_ko": "2026 북중미 월드컵이 군중 분석·안면 인식 등 AI 기반 감시 시스템을 대규모 실전 배치하는 무대가 됐다는 분석이다. 스포츠 메가이벤트가 첨단 감시 기술의 테스트베드로 기능하면서 시민 감시 인프라가 정상화되는 메커니즘을 짚는다.",
+          "why": "AI 감시가 연구실 밖 현실 인프라로 빠르게 이식되는 속도와 사회적 수용 과정을 보여준다.",
+          "author": "The Conversation U.S.",
+          "url": "https://medium.com/@ConversationUS/world-cup-propels-surveillance-to-new-heights-75a06106d557",
+          "tags": ["surveillance", "AI-ethics", "World-Cup"],
+          "access": "free",
+          "signal": 3
+        },
+        {
+          "id": "ml-learning-2026",
+          "title_ko": "2026년에 머신러닝을 처음 배운다면 이 경로로",
+          "summary_ko": "지금 시점에 ML을 처음 시작한다면 어떤 순서와 자원을 선택해야 효율적인지를 경험 기반으로 정리한 로드맵이다. 빠르게 바뀐 도구 환경과 커리큘럼 변화를 반영해 실질적인 진입로를 제시한다.",
+          "why": "AI 수요 폭증으로 ML 입문 수요가 높아진 시점에 실용적인 기준점을 제공하는 레퍼런스.",
+          "author": "Marina Wyss",
+          "url": "https://medium.com/@gratitudedriven/how-id-learn-machine-learning-in-2026-f028a025ddbf",
+          "tags": ["ML", "education", "roadmap"],
+          "access": "member",
+          "signal": 2
+        }
+      ]
+    },
+    {
+      "source": "Investing.com Daily Digest",
+      "source_url": "https://www.investing.com/news/",
+      "domain": "finance",
+      "label": "마켓 · 국제금융",
+      "items": []
+    }
+  ],
+  "entities_today": ["Sakana", "Fugu", "AI-agent", "ML", "World-Cup", "surveillance"]
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04",
+  "updated": "2026-07-06",
   "entities": {
     "GLM-5.2": { "count": 3, "streak": 3, "first_seen": "2026-07-02", "last_seen": "2026-07-04", "domain": "ai" },
     "China": { "count": 4, "streak": 2, "first_seen": "2026-07-01", "last_seen": "2026-07-04", "domain": "cross" },
@@ -8,6 +8,11 @@
     "Tesla": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
     "RAG": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" },
     "Bitcoin": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "finance" },
-    "Sakana": { "count": 1, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-04", "domain": "ai" }
+    "Sakana": { "count": 2, "streak": 1, "first_seen": "2026-07-04", "last_seen": "2026-07-06", "domain": "ai" },
+    "Fugu": { "count": 1, "streak": 1, "first_seen": "2026-07-06", "last_seen": "2026-07-06", "domain": "ai" },
+    "AI-agent": { "count": 1, "streak": 1, "first_seen": "2026-07-06", "last_seen": "2026-07-06", "domain": "ai" },
+    "ML": { "count": 1, "streak": 1, "first_seen": "2026-07-06", "last_seen": "2026-07-06", "domain": "ai" },
+    "World-Cup": { "count": 1, "streak": 1, "first_seen": "2026-07-06", "last_seen": "2026-07-06", "domain": "cross" },
+    "surveillance": { "count": 1, "streak": 1, "first_seen": "2026-07-06", "last_seen": "2026-07-06", "domain": "ai" }
   }
 }
